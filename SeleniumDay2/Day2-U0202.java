@@ -5,39 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Day2_U0201 {
-//t0201
-	public static void main(String[] args) {
-	
-		//browser launch
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.omrbranch.com");
-		driver.manage().window().maximize();
-		WebElement txtUserName =driver.findElement(By.id("email"));
-		txtUserName.sendKeys("greenstechchennaiomr@gmail.com");
-		WebElement txtPassWord = driver.findElement(By.id("pass"));
-		txtPassWord.sendKeys("Greens@123");
-		
-	}
-	
-}
-
-
-
-
-
-package com.omrbranch.day2;
-
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 public class Day2_U0202 {
-//t0202	
-public static void main(String[] args) {
+
+public void t0202() {
 	WebDriver driver = new ChromeDriver();
 	driver.get("https://www.omrbranch.com/apitestingtraininginchennaiomr");
 	driver.manage().window().maximize();
@@ -49,12 +19,15 @@ public static void main(String[] args) {
 	 txtPhone.sendKeys("99441 52058");
 	 WebElement txtEmail = driver.findElement(By.id("email"));
 	 txtEmail.sendKeys("greenstechchennaiomr@gmail.com");
-	 // WebElement txtAddress = driver.findElement(By.cssSelector("form-control address"));
-	 //txtAddress.sendKeys("ICICI Bank Upstairs, Balamurugan Garden,Plot No.19, Landmark:, opposite to Sangeetha hotel,okkiam,Chennai,Tamilnadu 600097");
+	 WebElement txtAddress = driver.findElement(By.xpath("//textarea[@class='form-control address']"));
+	 txtAddress.sendKeys("ICICI Bank Upstairs, Balamurugan Garden,Plot No.19, Landmark:, opposite to Sangeetha hotel,okkiam,Chennai,Tamilnadu 600097");
 	 WebElement txtPassWord = driver.findElement(By.id("password"));
 	 txtPassWord.sendKeys("Greens@123");
 	 WebElement txtConfirmPass = driver.findElement(By.id("confirm-password"));
 	 txtConfirmPass.sendKeys("Greens@123");
 }
-	
+public static void main(String[] args) {
+	Day2_U0202 m = new Day2_U0202();
+	m.t0202();
+}	
 }
